@@ -4,4 +4,5 @@ from asyncio import sleep
 from discord.utils import get
 
 token = 'a token'
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='%')
+
