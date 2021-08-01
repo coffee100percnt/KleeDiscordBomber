@@ -1,2 +1,2 @@
 # KleeDiscordBomber
-A crasher bot
+A crasher bot for Discord
