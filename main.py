@@ -14,4 +14,4 @@ async def boom(ctx, arg):
     booms = 0
     while arg >= int(booms):
         ctx.send('BOOM BOOM BAKUDAN! ||@everyone||')
-        count += 1
+        booms += 1
