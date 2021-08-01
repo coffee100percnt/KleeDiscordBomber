@@ -6,10 +6,10 @@ from discord.utils import get
 
 token = 'a token'
 bot = commands.Bot(command_prefix='%')
-guild = discord.Guild()
+guild = discord.Guild
 
 @bot.command()
-async def boom(ctx, arg):
+async def boom(ctx, arg=10):
     await ctx.message.delete()
     booms = 0
     while booms <= int(arg):
@@ -18,7 +18,7 @@ async def boom(ctx, arg):
     booms = 0
 
 @bot.command()
-async def bang_roles(ctx, arg):
+async def bang_roles(ctx, arg=10):
     await ctx.message.delete()
     bangs = 0
     while bangs <= int(arg):
