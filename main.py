@@ -4,7 +4,7 @@ from discord.ext import commands
 from asyncio import sleep
 from discord.utils import get
 
-token = 'ODcxMzI3MDcxMjM2OTQzOTMy.YQZskg.imM7t49ceJhFCVBToirGdSkNBXM'
+token = 'a token'
 bot = commands.Bot(command_prefix='%')
 guild = discord.Guild
 
