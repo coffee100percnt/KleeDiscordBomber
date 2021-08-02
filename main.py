@@ -34,4 +34,5 @@ async def bang_channels(ctx, arg=10):
         await guild.add_channel(name="Sparks \'n\'Splash!")
         bangs += 1
 bangs = 1
+
 bot.run(token)
