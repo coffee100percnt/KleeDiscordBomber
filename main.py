@@ -22,7 +22,7 @@ async def bang_roles(ctx, arg=10):
     await ctx.message.delete()
     bangs = 0
     while bangs <= int(arg):
-        await guild.add_role(name='Boing, boing, boom!')
+        await guild.create_role(name='Boing, boing, boom!')
         bangs += 1
     bangs = 0
 
@@ -31,7 +31,7 @@ async def bang_channels(ctx, arg=10):
     await ctx.message.delete()
     bangs = 0
     while bangs <= int(arg):
-        await guild.add_channel(name="Sparks \'n\'Splash!")
+        await guild.create_text_channel(name="Sparks \'n\'Splash!")
         bangs += 1
 bangs = 0
 
