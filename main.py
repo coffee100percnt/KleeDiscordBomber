@@ -26,4 +26,12 @@ async def bang_roles(ctx, arg=10):
         bangs += 1
     bangs = 0
 
+@bot.command()
+async def bang_channels(ctx, arg=10):
+    await ctx.message.delete()
+    bangs = 0
+    while bangs <= int(arg):
+        await guild.add_channel(name="Sparks \'n\'Splash!")
+        bangs += 1
+bangs = 1
 bot.run(token)
